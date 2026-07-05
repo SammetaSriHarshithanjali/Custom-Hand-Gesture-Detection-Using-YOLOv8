@@ -1,0 +1,12 @@
+path: C:/Users/Saideepu Balaraju/Desktop/HandGestureDataset
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: peace
+  1: fist
+  2: thumbsup
+  3: super
+  4: stop
