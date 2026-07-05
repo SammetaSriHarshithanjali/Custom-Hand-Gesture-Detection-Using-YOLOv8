@@ -1,176 +1,239 @@
-# Custom Hand Gesture Detection using YOLOv8
+# ✋ Custom Hand Gesture Detection Using YOLOv8
 
-## Overview
-
-The *Custom Hand Gesture Detection* project is a real-time computer vision application that detects and classifies different hand gestures using a webcam and a custom-trained YOLOv8 model. The system is designed for gesture-based human-computer interaction and demonstrates the capabilities of deep learning for object detection.
+A real-time **Hand Gesture Detection System** developed using **Python**, **YOLOv8**, **OpenCV**, and **Computer Vision**. The project detects and classifies custom hand gestures from webcam input using a deep learning model trained on a custom dataset.
 
 ---
 
-## Features
+# 📖 Project Overview
 
-- Real-time hand gesture detection
-- Webcam-based live inference
-- Custom YOLOv8 model training
-- High-speed object detection
-- Displays gesture labels with confidence scores
-- Easy to train with custom datasets
+Hand gesture recognition plays an important role in Human-Computer Interaction (HCI), enabling intuitive and touchless interaction between humans and machines.
+
+This project uses **YOLOv8 (You Only Look Once Version 8)** to detect and classify multiple hand gestures in real time. The model has been trained on a custom annotated dataset and performs fast, accurate gesture detection from live webcam feeds.
 
 ---
 
-## Technologies Used
+# ✨ Features
 
-- Python
-- YOLOv8 (Ultralytics)
-- OpenCV
-- PyTorch
-- NumPy
+- ✅ Real-time hand gesture detection
+- ✅ Webcam-based live inference
+- ✅ Custom YOLOv8 model training
+- ✅ High-speed object detection
+- ✅ Confidence score visualization
+- ✅ Lightweight implementation
+- ✅ Easy to retrain using custom datasets
 
 ---
 
-## Project Structure
+# 🛠️ Technology Stack
 
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Deep Learning | YOLOv8 (Ultralytics) |
+| Computer Vision | OpenCV |
+| Framework | PyTorch |
+| Data Processing | NumPy |
+| Development Environment | VS Code |
 
+---
+
+# 📂 Project Structure
+
+```text
 Custom-Hand-Gesture-Detection/
 │
 ├── train.py
-├── resume_train.py
-├── test.py
+├── evaluate.py
 ├── webcam.py
+├── convert_json_to_yolo.py
+├── split_dataset.py
 ├── data.yaml
+├── yolov8n.pt
 ├── requirements.txt
-├── .gitignore
-└── README.md
-
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
-## Installation
+# 🧠 Model
 
-### Clone the Repository
+The project uses **YOLOv8 Nano (YOLOv8n)** for real-time object detection.
 
-bash
-git clone https://github.com/SAIDEEPUBALARAJU-2003/Custom-Hand-Gesture-Detection.git
+The model is trained on a custom dataset to recognize multiple hand gestures with high speed and accuracy.
 
+---
 
-### Navigate to the Project Folder
+# 📊 Dataset
 
-bash
-cd Custom-Hand-Gesture-Detection
+The model was trained on a **custom hand gesture dataset** created specifically for this project.
 
+The dataset contains manually collected and annotated images of different hand gestures.
 
-### Install Dependencies
+> **Note**
+>
+> The dataset is **not included** in this repository because it contains personally collected images and is not intended for public distribution.
 
-bash
+Users can train the project using their own dataset by following the same folder structure and annotation format.
+
+---
+
+# 📁 Expected Dataset Structure
+
+```text
+dataset/
+│
+├── train/
+│   ├── images/
+│   └── labels/
+│
+├── valid/
+│   ├── images/
+│   └── labels/
+│
+└── test/
+    ├── images/
+    └── labels/
+```
+
+Images should be annotated in **YOLO format**.
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/SammetaSriHarshithanjali/Custom-Hand-Gesture-Detection-Using-YOLOv8.git
+```
+
+Navigate to the project directory
+
+```bash
+cd Custom-Hand-Gesture-Detection-Using-YOLOv8
+```
+
+Install the required packages
+
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-## Training the Model
+# 🚀 Training
 
-Train the custom YOLOv8 model:
+Train the custom YOLOv8 model.
 
-bash
+```bash
 python train.py
+```
 
 ---
 
-## Testing the Model
+# 📊 Evaluation
 
-Run:
+Evaluate the trained model.
 
-bash
-python test.py
-
+```bash
+python evaluate.py
+```
 
 ---
 
-## Real-Time Gesture Detection
+# 📷 Real-Time Detection
 
-Start webcam detection:
+Start webcam-based hand gesture detection.
 
-bash
+```bash
 python webcam.py
-
-
----
-
-## Supported Hand Gestures
-
-The model detects the following custom hand gestures:
-
-- Fist ✊
-- Peace ✌️
-- Stop ✋
-- Thumbs Up 👍
-- Super 🤙
-
-> You can modify the dataset and data.yaml file to support additional gestures.
+```
 
 ---
 
-## Applications
+# ✋ Supported Hand Gestures
+
+The model can recognize custom hand gestures such as:
+
+- ✊ Fist
+- ✌️ Peace
+- ✋ Stop
+- 👍 Thumbs Up
+- 🤙 Super
+
+The supported classes can be modified by updating the dataset and `data.yaml`.
+
+---
+
+# 🎯 Applications
 
 - Human-Computer Interaction (HCI)
-- Gesture-Based Control Systems
-- Smart Home Automation
 - Touchless User Interfaces
+- Gesture-Controlled Systems
 - Robotics
-- Gaming Applications
+- Smart Home Automation
+- Gaming
+- Educational AI Applications
 - Sign Language Research
 
 ---
 
-## Future Enhancements
+# 📈 Results
 
-- Support for additional hand gestures
-- Voice feedback for detected gestures
-- Mobile application integration
+- High detection accuracy
+- Real-time webcam inference
+- Fast YOLOv8 object detection
+- Low latency
+- Lightweight deployment
+
+---
+
+# 💡 Future Enhancements
+
+- Dynamic hand gesture recognition
 - Multi-hand detection
-- Gesture-based presentation control
-- Smart home device control
+- Gesture-based virtual mouse
+- Voice feedback
+- Mobile deployment
+- TensorRT optimization
+- Smart home integration
 
 ---
 
-## Requirements
+# 📚 Skills Demonstrated
 
-- Python 3.10+
+- Python
+- Computer Vision
+- Deep Learning
+- YOLOv8
 - OpenCV
-- Ultralytics YOLOv8
-- PyTorch
-- NumPy
-
-Install all dependencies using:
-
-bash
-pip install -r requirements.txt
-
+- Object Detection
+- Dataset Annotation
+- Model Training
+- Real-Time AI Applications
 
 ---
 
-## Results
-
-The trained YOLOv8 model is capable of detecting multiple hand gestures in real time with high accuracy using a standard webcam. The system displays the detected gesture label along with its confidence score, enabling fast and reliable gesture recognition.
-
----
-
-## Author
-
-*Sri Harshithanjali Sammeta*
-
-GitHub: https://github.com/SammetaSriHarshithanjali
-
----
-
-## License
+# 📄 License
 
 This project is intended for educational and research purposes.
 
 ---
 
-## Acknowledgements
+# 👩‍💻 Author
 
-- Ultralytics YOLOv8
-- OpenCV
-- PyTorch
-- Python Community
+**Anjali**
+
+Machine Learning | Deep Learning | Computer Vision | Data Engineering
+
+📧 Email: anjalisammeta03@gmail.com
+
+🔗 GitHub: https://github.com/SammetaSriHarshithanjali
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
